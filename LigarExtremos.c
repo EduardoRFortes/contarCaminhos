@@ -24,23 +24,19 @@ int main(){
             matriz[i][j] = rand() % 11;
     }
 
-    // Imprimindo a matriz com a formatação desejada
     printf("Matriz gerada:\n");
     for(i = 0; i < 10; i++){
         for(j = 0; j < 10; j++){
-            printf("%02d ", matriz[i][j]);  // Exibe números com 2 dígitos (0 à esquerda se necessário)
+            printf("%02d ", matriz[i][j]);
         }
         printf("\n");
     }
 
-    // Solicitando ao usuário um valor para n
     printf("Informe um valor menor que 150: ");
     scanf("%d", &n);
 
-    // Chamando a função que conta os caminhos
     int total = contaCaminhos(0, 0, 0, n, matriz);
 
-    // Exibindo o total de caminhos
     printf("Total de caminhos com soma %d: %d\n", n, total);
 
     return 0;
